@@ -4,7 +4,7 @@
 In 2010 I came across a compact calendar. It's a spreadsheet where you just change the year and it creates a compact view of that year so you can print it and write notes on certain periods. It gives an overview and let you think about the coming year.
 The original version is the .xls file. The PDF version is for those who won't open a spreadsheet blindly ;). Change the year in G1 to get that year's compact calendar. This spreadsheet was modified in 2011 to include french holidays. Then I made a larger version for a specific need and I'm putting it here because I'm probably the only person looking at it anyway. I've only used LibreOffice and OpenOffice for about 20 years. You can be sure these spreadsheet files are compatible with open source office suites.
 
-![](Compact Calendar screenshot.png)
+![](Compact%20Calendar%20screenshot.png)
 
 ### The original files
 - [The original 2011 verions](CompactCalendar2011-France.xls)

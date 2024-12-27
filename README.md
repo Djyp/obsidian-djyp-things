@@ -8,7 +8,7 @@ Everything is described in a dedicated repository : https://github.com/Djyp/obsi
 
 ## Compact Calendar
 There's a type of year view you may need, showing a whole year.
-[See more](Compact Calendar/Compact Calendar.md)
+[See more](Compact%20Calendar/Compact%20Calendar.md)
 
 ## Foot notes
 This repository is under the [MIT License](LICENSE)

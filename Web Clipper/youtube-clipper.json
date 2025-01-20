@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube",
+	"behavior": "create",
+	"noteContentFormat": "## Video\n\n![{{title}}]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n## Description\n\n{{schema:@VideoObject:description}}\n\n## Notes\n\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{schema:@VideoObject:name}}",
+			"type": "text"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "lastReviewAt",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "source",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{schema:@VideoObject:author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "publishedAt",
+			"value": "{{schema:@VideoObject:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "thumbnailUrl",
+			"value": "{{schema:@VideoObject:thumbnailUrl|first}}",
+			"type": "text"
+		},
+		{
+			"name": "duration",
+			"value": "{{schema:@VideoObject:duration|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com/watch"
+	],
+	"noteNameFormat": "{{date|date:YYYY-MM-DD}} {{time|date:HH:mm}} - VIDEO {{schema:@VideoObject:author}} - {{schema:@VideoObject:name|safe_name|trim}}",
+	"path": "Lab/Inbox"
+}

@@ -1,0 +1,41 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Article",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "lastReviewAt",
+			"value": "{{date|date:YYYY-MM-DD}}",
+			"type": "date"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "publishedAt",
+			"value": "{{published|date:YYYY-MM-DD}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{date|date:YYYY-MM-DD}} {{time|date:HH:mm}} - {{title|safe_name}}",
+	"path": "Lab/Inbox"
+}
